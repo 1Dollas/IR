@@ -1,0 +1,99 @@
+public class Escola {
+    private String nome;
+    private String endereco;
+    private Pessoa diretor;
+    private List<Curso> cursos;
+
+    public Escola(String nome, String endereco, Pessoa diretor) {
+        this.nome = nome;
+        this.endereco = endereco;
+        this.diretor = diretor;
+        this.cursos = new ArrayList<>();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public Pessoa getDiretor() {
+        return diretor;
+    }
+
+    public void setDiretor(Pessoa diretor) {
+        this.diretor = diretor;
+    }
+
+    public List<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Curso> cursos) {
+        this.cursos = cursos;
+    }
+
+    public void adicionarCurso(Curso curso) {
+        cursos.add(curso);
+    }
+
+    public void removerCurso(Curso curso) {
+        cursos.remove(curso);
+    }
+
+    public List<Curso> listarCursos() {
+        return cursos;
+    }
+}
+
+public class Pessoa {
+    private String nome;
+    private int idade;
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+}
+
+public class Curso {
+    private String nome;
+
+    public Curso(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
